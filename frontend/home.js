@@ -161,7 +161,7 @@ const SKILL_SET_ITEMS = [
         loadingContainer.classList.remove("d-flex");
         loadingContainer.classList.add("d-none");
         loadedContainer.classList.remove("d-none");
-    }, 500);
+    }, 3000);
 })();
 
 
