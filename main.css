@@ -44,22 +44,17 @@ body {
     }
 }
 
-.cover-video-container {
-    position: fixed;
-    height: 100vh;
-    width: 100vw;
-}
-
 .cover-video {
-    height: 100%;
-    width: 100%;
+    height: 100vh !important;
+    position: absolute;
     z-index: 0;
-    filter: brightness(10%);
+    width: 100% !important;
     object-fit: cover;
+    filter: brightness(25%);
 }
 
 .title-container {
-    z-index: 1;
+    z-index: 200!important;
     color: white;
     height: 100vh;
     width: 100vw;
@@ -74,7 +69,7 @@ body {
     font-size: 40px;
     height: 700px;
     text-align: center;
-
+    z-index: 2;
 }
 
 
