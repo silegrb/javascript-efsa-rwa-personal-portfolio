@@ -1,5 +1,3 @@
-//const axios = require('axios');
-
 // CONSTANTS
 const mockData = [
     {
@@ -107,5 +105,36 @@ const handleClickFooterIcon = (index) => {
             window.open(FOOTER_LINKS.GITHUB);
             break;
         default:
+    }
+}
+
+const handleOpenAddReviewModal = () => {
+    const backdrop = document.getElementById("modal-backdrop");
+    backdrop.classList.remove("d-none");
+    const modal = document.getElementById("add-review-modal");
+    modal.classList.remove("d-none");
+}
+
+const handleCloseAddReviewModal = () => {
+    const backdrop = document.getElementById("modal-backdrop");
+    backdrop.classList.add("d-none");
+    const modal = document.getElementById("add-review-modal");
+    modal.classList.add("d-none");
+   document.getElementById("name").value = '';
+   document.getElementById("surname").value = '';
+    document.getElementById("review-text").value = '';
+}
+
+const handleClickComplete = () => {
+    const name = document.getElementById("name");
+    const surname = document.getElementById("surname");
+    const reviewText = document.getElementById("review-text");
+
+    if(name.value !== '' && surname.value !== '' && reviewText.value !== ''){
+        name.value = '';
+        surname.value = '';
+        reviewText.value = '';
+        // call post request
+        handleCloseAddReviewModal();
     }
 }

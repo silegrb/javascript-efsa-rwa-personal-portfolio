@@ -31,12 +31,18 @@
                 </video>
             </div>
             <div class="basic-info-container w-100 d-flex justify-content-center align-items-center">
-                <div class="w-75 basic-info-container-text">
-                    22 year old Software Engineering Developer, from Bosnia and Herzegowina, Sarajevo.
-                    Focused on constant and never-ending self-improvement.
-                    Currently working as a full-time Software Development Engineer.
-                    Graduated from Faculty of Electrical engineering earlier & currently seeking
-                    Master's degree at Faculty of Economics and Business - Department of Management and Informational Systems.
+                <div class="row">
+                    <div class="offset-2 col-8 w-75 basic-info-container-text">
+                        22 year old Software Engineering Developer, from Bosnia and Herzegowina, Sarajevo.
+                        Focused on constant and never-ending self-improvement.
+                        Currently working as a full-time Software Development Engineer.
+                        Graduated from Faculty of Electrical engineering earlier & currently seeking
+                        Master's degree at Faculty of Economics and Business - Department of Management and Informational Systems.
+                    </div>
+                    <div class="pt-5 col-12 w-75 basic-info-container-text">
+                        Where do I live?
+                        <img src="map_pin.svg" class="map-pin ml-2" onclick="handleClickMapPin()">
+                    </div>
                 </div>
             </div>
             <div class="brain-training-container">
@@ -94,7 +100,28 @@
                     </div>
                 </div>
             </div>
-        </div>
+            <div id="map-modal" class="map-modal d-none">
+                <div class="position-relative">
+                    <img class="icon-x-2 position-absolute" src="icon_x.svg" onclick="handleCloseMapModal()">
+                    <div class="mapouter">
+                        <div class="gmap_canvas">
+                            <iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=Sarajevo&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+                            </iframe>
+                            <a href="https://www.whatismyip-address.com/divi-discount/"></a>
+                            <br>
+                            <style>
+                                .mapouter{position:relative;text-align:right;height:500px;width:600px;}
+                            </style>
+                            <a href="https://www.embedgooglemap.net">
+                            </a>
+                            <style>
+                                .gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}
+                            </style>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
     </div>
 </body>
 <script src="home.js"></script>

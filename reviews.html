@@ -24,7 +24,7 @@
                     <button class="review-button" onclick="redirectToHome()">GO BACK HOME</button>
                 </div>
                 <div class="col-6 d-flex justify-content-start">
-                    <button class="review-button">LEAVE A REVIEW</button>
+                    <button class="review-button" onclick="handleOpenAddReviewModal()">LEAVE A REVIEW</button>
                 </div>
             </div>
             <div class="footer w-100 d-flex justify-content-center align-items-center">
@@ -43,6 +43,21 @@
                         &copy; Šišić Faris, All Rights Reserved 2021
                     </div>
                 </div>
+            </div>
+            <div id="add-review-modal" class="add-review-modal d-none">
+                <div class="d-flex p-5 flex-column h-100 position-relative">
+                    <img class="icon-x position-absolute" src="icon_x.svg" onclick="handleCloseAddReviewModal()">
+                    <div class="d-flex justify-content-center custom-modal-title">Leave a review</div>
+                    <div class="d-flex justify-content-center">NOTE: You cannot complete the review if all fields aren't filled!</div>
+                    <input id="name" type="text" class="mt-2 p-1" placeholder="Name">
+                    <input id="surname" type="text" class="mt-2 p-1" placeholder="Surname">
+                    <textarea id="review-text" class="mt-2 flex-grow-1 p-1" placeholder="You can leave your review here..."></textarea>
+                    <div class="d-flex justify-content-end pt-3">
+                        <button class="complete-button" onclick="handleClickComplete()">Complete</button>
+                    </div>
+                </div>
+            </div>
+            <div id="modal-backdrop" class="custom-modal-backdrop d-none">
             </div>
         </div>
 </div>

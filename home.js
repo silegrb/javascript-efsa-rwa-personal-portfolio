@@ -246,3 +246,18 @@ const redirectToReviews = () => {
     location.href = "/reviews";
 }
 
+const handleClickMapPin = () => {
+    const modal = document.getElementById("map-modal");
+    modal.classList.remove("d-none");
+    modal.classList.add("d-flex");
+    modal.classList.add("justify-content-center");
+    modal.classList.add("align-items-center");
+}
+
+const handleCloseMapModal = () => {
+    const modal = document.getElementById("map-modal");
+    modal.classList.remove("d-flex");
+    modal.classList.add("d-none");
+}
+
+
