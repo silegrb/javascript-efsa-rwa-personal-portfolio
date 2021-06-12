@@ -242,3 +242,7 @@ const handleClickFooterIcon = (index) => {
     }
 }
 
+const redirectToReviews = () => {
+    location.href = "/reviews";
+}
+

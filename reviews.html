@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FS | Reviews</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Roboto:wght@100&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="root" class="w-100 h-100">
+        <div class="d-flex flex-column h-100">
+            <div class="d-flex justify-content-center reviews-title">REVIEWS</div>
+            <div id="loader-container" class="d-flex flex-grow-1 justify-content-center align-items-center">
+                <div class="loader"></div>
+            </div>
+            <div id="reviews-container" class="p-5 row d-none">
+                <div class="col-6 d-flex justify-content-end">
+                    <button class="review-button" onclick="redirectToHome()">GO BACK HOME</button>
+                </div>
+                <div class="col-6 d-flex justify-content-start">
+                    <button class="review-button">LEAVE A REVIEW</button>
+                </div>
+            </div>
+            <div class="footer w-100 d-flex justify-content-center align-items-center">
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-center">LETS CONNECT</div>
+                    <div class="col-2"></div>
+                    <div class="col-8 d-flex justify-content-between align-items-center footer-icon-container">
+                        <img class="footer-icon" src="icon_facebook.png" onclick="handleClickFooterIcon(0)">
+                        <img class="footer-icon" src="icon_youtube.png" onclick="handleClickFooterIcon(1)">
+                        <img class="footer-icon" src="icon_instagram.png" onclick="handleClickFooterIcon(2)">
+                        <img class="footer-icon" src="icon_linkedin.png" onclick="handleClickFooterIcon(3)">
+                        <img class="footer-icon" src="icon_github.png" onclick="handleClickFooterIcon(4)">
+                    </div>
+                    <div class="col-2"></div>
+                    <div class="col-12 d-flex justify-content-center footer-copyright">
+                        &copy; Šišić Faris, All Rights Reserved 2021
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+</body>
+<script src="reviews.js"></script>
+</html>
