@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FS | Home</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Roboto:wght@100&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="root" class="w-100 h-100">
+        <div id="loading-container" class="w-100 h-100 d-flex justify-content-center align-items-center">
+            <img src="image_logo.png" class="loading-image">
+        </div>
+        <div id="loaded-container" class="d-none">
+            <div class="title-container d-flex justify-content-center align-items-center">
+                <div class="row">
+                    <div class="d-flex justify-content-center col-12">LIFE IS NOW. STAY FOCUSED.</div>
+                    <div class="d-flex justify-content-center header-subtitle col-12"><strong>Šišić Faris</strong>&nbsp; Software Development Engineer</div>
+                </div>
+            </div>
+            <div class="cover-video-container">
+                <video autoplay loop class="cover-video">
+                    <source src="coding_video.webm"
+                            type="video/webm">
+                </video>
+            </div>
+            <div class="basic-info-container w-100 d-flex justify-content-center align-items-center">
+                <div class="w-75">
+                    22 year old Software Engineering Developer, from Bosnia and Herzegowina, Sarajevo.
+                    Focused on constant and never-ending self-improvement.
+                    Currently working as a full-time Software Development Engineer.
+                    Graduated from Faculty of Electrical engineering earlier & currently seeking
+                    Master's degree at Faculty of Economics and Business - Department of Management and Informational Systems.
+                </div>
+            </div>
+            <div class="brain-training-container">
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-center brain-training-title">BRAIN TRAINING</div>
+                    <div class="col-12 pt-5 d-flex justify-content-center">
+                        <img src="arrow-left.svg" class="brain-training-arrow mr-3" onclick="handleGoLeft()">
+                        <img id="brain-training-slider-image" class="brain-training-slider">
+                        <img src="arrow-right.svg" class="brain-training-arrow ml-3" onclick="handleGoRight()">
+                    </div>
+                    <div id="brain-training-slider-title" class="col-12 d-flex justify-content-center"></div>
+                    <div id="brain-training-slider-subtitle" class="col-12 d-flex justify-content-center"></div>
+                </div>
+            </div>
+            <div class="skill-set-container pt-5">
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-center brain-training-title">SKILL SET</div>
+                    <div class="col-6 d-flex justify-content-center">
+                        <div class=" skill-set-screws-container">
+                            <img alt="" src="icon_screw.svg" class="skill-set-screw" />
+                            <img alt="" src="icon_screw.svg" class="skill-set-screw-2" />
+                        </div>
+                    </div>
+                    <div class="col-5 d-flex justify-content-center align-items-center skill-set-note">
+                        Mainly focused on delivering & developing quality front-end,
+                        which is also known as client-side development.
+                        <br />
+                        <br />
+                        JavaScript Framework React, Vanilla JavaScript, HTML5 & CSS3 are
+                         my top skills
+                        used to improve user experience and develop what you see.
+                    </div>
+                </div>
+            </div>
+            <div class="footer w-100 d-flex justify-content-center align-items-center">
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-center">LETS CONNECT</div>
+                    <div class="col-12 d-flex justify-content-between align-items-center footer-icon-container">
+                        <img class="footer-icon" src="icon_facebook.png" onclick="handleClickFooterIcon(0)">
+                        <img class="footer-icon" src="icon_youtube.png" onclick="handleClickFooterIcon(1)">
+                        <img class="footer-icon" src="icon_instagram.png" onclick="handleClickFooterIcon(2)">
+                        <img class="footer-icon" src="icon_linkedin.png" onclick="handleClickFooterIcon(3)">
+                        <img class="footer-icon" src="icon_github.png" onclick="handleClickFooterIcon(4)">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="main.js"></script>
+</html>
