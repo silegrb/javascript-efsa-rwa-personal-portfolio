@@ -28,6 +28,10 @@ server.get('/reviews.js', (req,res) => {
     res.sendFile(`${__dirname}/reviews.js`);
 });
 
+server.get('/calls.js', (req,res) => {
+    res.sendFile(`${__dirname}/reviews.js`);
+});
+
 server.get('/image_logo.png', (req,res) => {
     res.sendFile(`${__dirname}/image_logo.png`);
 });

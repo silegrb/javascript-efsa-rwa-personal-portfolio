@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="086e6e00-282d-4eed-b767-f6f6b3835bbc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/backend/.env" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/models/ReviewModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models/ReviewModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/reviews.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/reviews.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/reviews.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/reviews.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +60,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1623488368961</updated>
-      <workItem from="1623488370302" duration="24504000" />
+      <workItem from="1623488370302" duration="26226000" />
     </task>
     <servers />
   </component>
@@ -67,13 +72,17 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="57" key="SettingsEditor/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1623488416177" />
-    <state x="2697" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1623515895850">
+    <state x="2697" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1623524490629">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2697" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1623515895850" />
+    <state x="2697" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1623524490629" />
     <state x="2536" y="240" key="run.anything.popup" timestamp="1623513722956">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2536" y="240" key="run.anything.popup/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1623513722956" />
+    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1623524326850">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1623524326850" />
   </component>
 </project>

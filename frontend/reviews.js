@@ -1,30 +1,4 @@
 // CONSTANTS
-const mockData = [
-    {
-        name: 'Faris',
-        surname: 'Šišić',
-        date: new Date(),
-        review: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\n' +
-            '\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\n' +
-            '\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\n' +
-            '\n'
-    },
-    {
-        name: 'Faris',
-        surname: 'Šišić',
-        date: new Date(),
-        review: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\n' +
-            '\n'
-    },
-    {
-        name: 'Faris',
-        surname: 'Šišić',
-        date: new Date(),
-        review: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\n' +
-            '\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\n' +
-            '\n'
-    }
-];
 
 const FOOTER_LINKS = {
     FACEBOOK: 'https://www.facebook.com/shile.pres',
@@ -35,20 +9,21 @@ const FOOTER_LINKS = {
 };
 
 // EXECUTE RIGHT AWAY
-(() => {
-    setTimeout(() => {
+const loadReviews = async () => {
+
+       const { data } = await axios.get('http://localhost:5000/reviews');
         const loaderContainer = document.getElementById("loader-container");
         loaderContainer.classList.remove("d-flex");
         loaderContainer.classList.add("d-none");
 
         const reviewsContainer = document.getElementById("reviews-container");
         reviewsContainer.classList.remove("d-none");
-        mockData.forEach(({name, surname, date: reviewDate, review: reviewText}) => {
+        data.forEach(({name, surname, date: reviewDate, review: reviewText}) => {
             const col = document.createElement("div");
             col.className = "offset-2 col-8 d-flex pt-5";
 
             const container = document.createElement("div");
-            container.className = "d-flex row";
+            container.className = "d-flex row w-100";
 
             const user = document.createElement("div");
             user.className = "user-title col-12 p-0";
@@ -56,7 +31,7 @@ const FOOTER_LINKS = {
 
             const date = document.createElement("div");
             date.className = "review-date col-12 p-0";
-            date.innerHTML = formatDate(reviewDate);
+            date.innerHTML = formatDate(new Date(reviewDate));
 
             const review = document.createElement("div");
             review.className = "review-text p-4 col-12 mt-2";
@@ -69,8 +44,11 @@ const FOOTER_LINKS = {
             col.append(container);
 
             reviewsContainer.append(col);
-        });
-    }, 1000);
+    });
+}
+
+(async () => {
+    await loadReviews();
 })();
 
 // EXECUTE WHEN NEEDED
@@ -125,16 +103,31 @@ const handleCloseAddReviewModal = () => {
     document.getElementById("review-text").value = '';
 }
 
-const handleClickComplete = () => {
+const handleClickComplete = async  () => {
     const name = document.getElementById("name");
     const surname = document.getElementById("surname");
     const reviewText = document.getElementById("review-text");
 
     if(name.value !== '' && surname.value !== '' && reviewText.value !== ''){
+        await axios.post('http://localhost:5000/reviews/add', {
+            name: name.value,
+            surname: surname.value,
+            review: reviewText.value,
+            date: new Date()
+        });
         name.value = '';
         surname.value = '';
         reviewText.value = '';
-        // call post request
         handleCloseAddReviewModal();
+        const loaderContainer = document.getElementById("loader-container");
+        loaderContainer.classList.remove("d-none");
+        loaderContainer.classList.add("d-flex");
+        document.getElementById("reviews-container").innerHTML = "<div class=\"col-6 d-flex justify-content-end\">\n" +
+            "                    <button class=\"review-button\" onclick=\"redirectToHome()\">GO BACK HOME</button>\n" +
+            "                </div>\n" +
+            "                <div class=\"col-6 d-flex justify-content-start\">\n" +
+            "                    <button class=\"review-button\" onclick=\"handleOpenAddReviewModal()\">LEAVE A REVIEW</button>\n" +
+            "                </div>";
+        await loadReviews();
     }
 }

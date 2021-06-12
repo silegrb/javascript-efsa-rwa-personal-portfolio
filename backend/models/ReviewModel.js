@@ -7,7 +7,7 @@ const reviewModel = new Schema({
         type: String,
         required: true,
     },
-    name: {
+    surname: {
         type: String,
         required: true,
     },
