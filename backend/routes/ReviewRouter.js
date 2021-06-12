@@ -10,4 +10,14 @@ router.get('/', async (req,res) => {
     }
 });
 
+router.post('/add', async ({body}, res) => {
+    try{
+        const review = await Review(body);
+        const savedReview = review.save();
+        res.send(savedReview);
+    }catch (e){
+        res.status(400).json({message: 'Something went wrong'});
+    }
+});
+
 module.exports = router;

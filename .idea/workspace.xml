@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="086e6e00-282d-4eed-b767-f6f6b3835bbc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/models/ReviewModel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/routes/ReviewRouter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/routes/ReviewRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/ReviewRouter.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +56,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1623488368961</updated>
-      <workItem from="1623488370302" duration="23352000" />
+      <workItem from="1623488370302" duration="24222000" />
     </task>
     <servers />
   </component>
