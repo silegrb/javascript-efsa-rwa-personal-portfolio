@@ -31,7 +31,7 @@
                 </video>
             </div>
             <div class="basic-info-container w-100 d-flex justify-content-center align-items-center">
-                <div class="w-75">
+                <div class="w-75 basic-info-container-text">
                     22 year old Software Engineering Developer, from Bosnia and Herzegowina, Sarajevo.
                     Focused on constant and never-ending self-improvement.
                     Currently working as a full-time Software Development Engineer.
@@ -42,7 +42,8 @@
             <div class="brain-training-container">
                 <div class="row">
                     <div class="col-12 d-flex justify-content-center brain-training-title">BRAIN TRAINING</div>
-                    <div class="col-12 pt-5 d-flex justify-content-center">
+                    <div class="col-12 pt-3 pb-1 d-flex justify-content-center brain-training-feedback-message">Click the picture to open the associated website</div>
+                    <div class="col-12 d-flex justify-content-center">
                         <img src="arrow-left.svg" class="brain-training-arrow mr-3" onclick="handleGoLeft()">
                         <img id="brain-training-slider-image" class="brain-training-slider">
                         <img src="arrow-right.svg" class="brain-training-arrow ml-3" onclick="handleGoRight()">
@@ -52,8 +53,8 @@
                 </div>
             </div>
             <div class="skill-set-container pt-5">
-                <div class="row">
-                    <div class="col-12 d-flex justify-content-center brain-training-title">SKILL SET</div>
+                <div id="skill-set-row" class="row">
+                    <div class="col-12 d-flex justify-content-center skill-set-title">SKILL SET</div>
                     <div class="col-6 d-flex justify-content-center">
                         <div class=" skill-set-screws-container">
                             <img alt="" src="icon_screw.svg" class="skill-set-screw" />
@@ -74,12 +75,17 @@
             <div class="footer w-100 d-flex justify-content-center align-items-center">
                 <div class="row">
                     <div class="col-12 d-flex justify-content-center">LETS CONNECT</div>
-                    <div class="col-12 d-flex justify-content-between align-items-center footer-icon-container">
+                    <div class="col-2"></div>
+                    <div class="col-8 d-flex justify-content-between align-items-center footer-icon-container">
                         <img class="footer-icon" src="icon_facebook.png" onclick="handleClickFooterIcon(0)">
                         <img class="footer-icon" src="icon_youtube.png" onclick="handleClickFooterIcon(1)">
                         <img class="footer-icon" src="icon_instagram.png" onclick="handleClickFooterIcon(2)">
                         <img class="footer-icon" src="icon_linkedin.png" onclick="handleClickFooterIcon(3)">
                         <img class="footer-icon" src="icon_github.png" onclick="handleClickFooterIcon(4)">
+                    </div>
+                    <div class="col-2"></div>
+                    <div class="col-12 d-flex justify-content-center footer-copyright">
+                        &copy; Šišić Faris, All Rights Reserved 2021
                     </div>
                 </div>
             </div>
